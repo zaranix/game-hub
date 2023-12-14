@@ -8,7 +8,8 @@ interface fetchGameResponse {
 export interface Platform {
 id : number,
 name : string,
-slug : string
+slug : string,
+
 }
 export interface Game {
   id : number,
@@ -16,6 +17,7 @@ export interface Game {
   background_image :string
   //Platform is the array of object where each object has property called Platform with type Platform #Design smell
   parent_platforms :  {platform : Platform}[]
+  metacritic : number
 }
 
 const useGames = () =>{
