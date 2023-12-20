@@ -18,6 +18,7 @@ export interface Game {
 }
 //params => property of axios request object
 //pass selectedgenre   as a query string parameter to the data hook
-const useGames = (selectedGenre : Genre | null) => useData<Game>('/games' , {params : {genres : selectedGenre?.id}} , [selectedGenre?.id])
+//array of dependency
+const useGames = (selectedGenre : Genre | null , selectedPlatform : Platform | null)  => useData<Game>('/games' , {params : {genres : selectedGenre?.id , platforms : selectedPlatform?.id}} , [selectedGenre?.id , selectedPlatform?.id])
 
 export default useGames  
