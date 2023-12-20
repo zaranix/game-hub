@@ -17,6 +17,7 @@ export interface Game {
   metacritic : number
 }
 //params => property of axios request object
+//pass selectedgenre   as a query string parameter to the data hook
 const useGames = (selectedGenre : Genre | null) => useData<Game>('/games' , {params : {genres : selectedGenre?.id}} , [selectedGenre?.id])
 
-export default useGames
+export default useGames  
