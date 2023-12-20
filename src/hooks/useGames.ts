@@ -1,4 +1,5 @@
 import useData from "./useData"
+import { Genre } from "./useGenres"
 
 export interface Platform {
 id : number,
@@ -15,7 +16,7 @@ export interface Game {
   parent_platforms :  {platform : Platform}[]
   metacritic : number
 }
-
-const useGames = () => useData<Game>('/games')
+//params => property of axios request object
+const useGames = (selectedGenre : Genre | null) => useData<Game>('/games' , {params : {genres : selectedGenre?.id}} , [selectedGenre?.id])
 
 export default useGames
