@@ -15,6 +15,7 @@ export interface Game {
   //Platform is the array of object where each object has property called Platform with type Platform #Design smell
   parent_platforms :  {platform : Platform}[]
   metacritic : number
+  rating_top: number
 }
 //params => property of axios request object
 //pass selectedgenre   as a query string parameter to the data hook
