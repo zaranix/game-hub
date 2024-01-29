@@ -3,6 +3,7 @@
 Mini version of rawg website
 
 ![screenshot](pic.jpg)
+Check out the live demo [here](https://game-hub.zaranix.tech/).
 ## Table of Contents
 
 - [Introduction](#introduction)
